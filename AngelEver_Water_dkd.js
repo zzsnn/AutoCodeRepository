@@ -28,9 +28,8 @@ TG: https://t.me/tom_ww
   抓包的url(大多数包都有这个header) ，举个例子
   https://dkd-api.dysdk.com/video/red_countdown，点进去请求头headerInfo的值复制出来即可，一般是ey开头
   
-  另：1.填写邀请码得金币（15447521），这个是我的，谢谢各位兄弟，没抓好参数的请来问我。
-     2.这个脚本目前只写了获取百分之四十的金币，后续的会抓紧继续写出来。
-     3.有其它毛也可以喊我写。
+  另：1.这个脚本目前只写了获取百分之四十的金币，后续的会抓紧继续写出来。
+     2.有其它毛也可以喊我写。
  */
 
 
@@ -278,7 +277,6 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
         await extra_time()
         await extra_again()
         await card()
-        await todayList()
         await cardDouble()
         await taskawardVideo()
         var arr = ["1", "2", "3", "11", "16", "12", "21", "22", "23"];
@@ -317,7 +315,6 @@ function ajaxExtend( target, src ) {
 
 function information(timeout = 0) {
     return new Promise((resolve) => {
-            todayList()
             let url = {
                 url: 'http://dkd-api.dysdk.com/user/index',
                 headers: commonHeader,
@@ -392,23 +389,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
     }
 }
 
-function todayList(timeout = 0) {
-    return new Promise((resolve) => {
-            let url = {
-                url: 'http://dkd-api.dysdk.com/inviter/bind?'+body+'&code=15447521',
-                headers: commonHeader,
-                body: body,
-            }
-            $.post(url, async (err, resp, data) => {
-            try {
-                const result = JSON.parse(data)
-            } catch (e) {
-    } finally {
-        resolve()
-    }
-},timeout)
-})
-}
+
 
 function ajaxConvert( s, response, jqXHR, isSuccess ) {
     var conv2, current, conv, tmp, prev,
@@ -508,7 +489,7 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 
 function welfare(timeout = 0) {
     return new Promise((resolve) => {
-            todayList()
+   
             let url = {
                 url: 'http://dkd-api.dysdk.com/welfare/index',
                 headers: commonHeader,
