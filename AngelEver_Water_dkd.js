@@ -1,8 +1,8 @@
 /*
 TG: https://t.me/tom_ww
+2021-10-19 --AngelEver
  软件app名称：多看点(目前只写了一部分，一天1-2元，后续会抓紧写)
 脚本地址：https://raw.githubusercontent.com/AngelEver/AutoCodeRepository/main/AngelEver_Water_dkd.js
-
  青龙面板：
  dkdck可以进去app点“我的”，找请求下的body
  dkdheader大部分请求都有的header
@@ -18,6 +18,19 @@ TG: https://t.me/tom_ww
   3.多账号@分隔
   
   脚本执行定时全都一致，一小时一次或者两小时一次
+
+  dkdck：
+  抓包的url(大多数包都有这个body) ，举个例子
+  https://dkd-api.dysdk.com/video/red_countdown
+  找到的body不会太长，大概长度在70-80个字符左右，如果body里面带有斜杠/，请去  http://www.jsons.cn/urlencode/  网站进行一下 UrlEncode编码
+
+  dkdheader：
+  抓包的url(大多数包都有这个header) ，举个例子
+  https://dkd-api.dysdk.com/video/red_countdown，点进去请求头headerInfo的值复制出来即可，一般是ey开头
+  
+  另：1.填写邀请码得金币（15447521），这个是我的，谢谢各位兄弟，没抓好参数的请来问我。
+     2.这个脚本目前只写了获取百分之四十的金币，后续的会抓紧继续写出来。
+     3.有其它毛也可以喊我写。
  */
 
 
