@@ -7,13 +7,16 @@
  dkdheader大部分请求都有的header
  多账号@分隔
  example:
- export dkdck=params=fTDrU1pt2u2nxxxxxxxxx2BgD%2F%0A@params=fTDrU1pt2u2nxxxxxxxxx2BgD%2F%0A
- export dkdheaders=eyJvcyI6Ik9uZVBsdXMixxxxx6IuWkmueci@eyJvcyI6Ik9uZVBsdXMixxxxx6IuWkmueci
+ export dkdck='params=fTDrU1pt2u2nNuvL2xxxxx%2F%0A@params=fTDrU1pt2u2nNuvL2m0xxxxxE%2BgD%2F%0A'
+ export dkdheaders='eyJvcyI6Ik9uZVBsdXMixxxxx6IuWkmueci@eyJvcyI6Ik9uZVBsdXMixxxxx6IuWkmueci'
  拉脚本新增任务命令(每天一次，持续更新，时间不限)：ql raw https://raw.githubusercontent.com/AngelEver/AutoCodeRepository/main/AngelEver_Water_dkd.js
  
  v2p:
   1.暂时不支持自动抓包，需要手动抓上面的两个key，很简单！
   2.抓好存一下然后添加一下task就可以执行了。
+  3.多账号@分隔
+  
+  脚本执行定时全都一致，一小时一次或者两小时一次
  */
 
 
