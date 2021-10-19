@@ -1,4 +1,5 @@
 /*
+TG: https://t.me/AngelEverK
  软件app名称：多看点(目前只写了一部分，一天1-2元，后续会抓紧写)
 脚本地址：https://raw.githubusercontent.com/AngelEver/AutoCodeRepository/main/AngelEver_Water_dkd.js
 
