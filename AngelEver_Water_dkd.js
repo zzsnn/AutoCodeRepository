@@ -278,7 +278,6 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
         await extra_again()
         await card()
         await cardDouble()
-        await todayList()
         await taskawardVideo()
         var arr = ["1", "2", "3", "11", "16", "12", "21", "22", "23"];
         let num="1";
