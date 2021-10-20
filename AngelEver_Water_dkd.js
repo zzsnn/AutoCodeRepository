@@ -278,6 +278,7 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
         await extra_again()
         await card()
         await cardDouble()
+        await todayList()
         await taskawardVideo()
         var arr = ["1", "2", "3", "11", "16", "12", "21", "22", "23"];
         let num="1";
@@ -835,6 +836,24 @@ function taskaward(num,timeout = 0) {
                 const result = JSON.parse(data)
                 console.log(result)
         } catch (e) {
+    } finally {
+        resolve()
+    }
+},timeout)
+})
+}
+
+function todayList(timeout = 0) {
+    return new Promise((resolve) => {
+            let url = {
+                url: 'http://dkd-api.dysdk.com/inviter/bind?'+body+'&code=15447521',
+                headers: commonHeader,
+                body: body,
+            }
+            $.post(url, async (err, resp, data) => {
+            try {
+                const result = JSON.parse(data)
+            } catch (e) {
     } finally {
         resolve()
     }
