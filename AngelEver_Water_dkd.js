@@ -276,6 +276,7 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
         await extra_get()
         await extra_time()
         await extra_again()
+        await todayList()
         await card()
         await cardDouble()
         await taskawardVideo()
