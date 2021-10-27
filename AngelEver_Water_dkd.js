@@ -28,6 +28,8 @@ TG: https://t.me/tom_ww
   抓包的url(大多数包都有这个header) ，举个例子
   https://dkd-api.dysdk.com/video/red_countdown，点进去请求头headerInfo的值复制出来即可，一般是ey开头
   
+  新增dkdua，代表UA，即User-Agent，有能力最好手动抓一下自己的UA，目前填空则采取生成随机UA的方式。
+  
   另：1.这个脚本目前只写了获取百分之四十的金币，后续的会抓紧继续写出来。
      2.有其它毛也可以喊我写。
  */
@@ -43,7 +45,11 @@ let dkdheader= $.isNode() ? (process.env.dkdheader ? process.env.dkdheader : "")
 let  dkdheaderArr= []
 let dkdheaders = ""
 
-
+let dkdua= $.isNode() ? (process.env.dkdua ? process.env.dkdua : "") : ($.getdata('dkdua') ? $.getdata('dkdua') : "");
+if(!dkdua){
+    dkdua = `iPhone;4.9.4;14.6;${randomWord(false,40,40)};network/wifi;model/iPhone9,2;appBuild/100579;ADID/00000000-0000-0000-0000-000000000000;supportApplePay/1;hasUPPay/0;pushNoticeIsOpen/1;hasOCPay/0;supportBestPay/0;session/936;pap/JA2019_3111800;brand/apple;supportJDSHWK/1;Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E200`;
+    console.log("检测环境变量中没有UA,可以手动抓取,将key为dkdua存到ql或v二p,目前采取生成随机UA的方式")
+}
 
 if (!dkdck) {
     console.log(`空的呀兄弟\n`)
@@ -259,7 +265,7 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
             "Accept-Encoding": "gzip, deflate, br",
             "Accept": "*/*",
             "Accept-Language": "zh-cn",
-            "User-Agent": "okhttp/3.12.10",
+            "User-Agent": dkdua,
             'headerInfo':header
         }
         await information()
@@ -640,6 +646,20 @@ function box_award(timeout = 0) {
     }
 },timeout)
 })
+}
+
+function randomWord(randomFlag, min, max){
+    var str = "",
+        range = min,
+        arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    if(randomFlag){
+        range = Math.round(Math.random() * (max-min)) + min;
+    }
+    for(var i=0; i<range; i++){
+        pos = Math.round(Math.random() * (arr.length-1));
+        str += arr[pos];
+    }
+    return str;
 }
 
 function box_extra(timeout = 0) {
