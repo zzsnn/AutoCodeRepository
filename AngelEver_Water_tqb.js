@@ -206,6 +206,7 @@ function resPxi(timeout = 0) {
             let url = {
                 url: 'http://api.taoquanbaapp.com/AppFanlishop/api/v1/public/user/garden/small?buildVersion=9.2&os=0&version=7.54&token='+tokenTemp+'&userId='+userIdTemp,
                 headers: commonHeader,
+                method: 'GET',
                 body: '',
             }
             $.get(url, async (err, resp, data) => {
