@@ -108,10 +108,10 @@ var userIdTemp=''
         console.log(`--------第 ${k + 1} 个账号收益查询中--------\n`)
         tokenTemp=tqbtokenArr[k];
         userIdTemp=tqbuseridArr[k];
+        await catRest()
         await resPxi()
         await flxTpq()
         await getList()
-        await catRest()
         await engTt()
         await getScoi()
         await fexJct()
