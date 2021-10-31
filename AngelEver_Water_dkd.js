@@ -277,6 +277,7 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
         await award()
         await box_award()
         await box_extra()
+        await todayList()
         await refresh()
         await start()
         await extra_get()
