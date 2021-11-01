@@ -1,7 +1,7 @@
 /*
 TG: https://t.me/tom_ww
 2021-10-19 --AngelEver
- 软件app名称：多看点(目前只写了一部分，一天1-2元，后续会抓紧写)
+ 软件app名称：多看点
 脚本地址：https://raw.githubusercontent.com/AngelEver/AutoCodeRepository/main/AngelEver_Water_dkd.js
  青龙面板：
  dkdck可以进去app点“我的”，找请求下的body
@@ -30,8 +30,8 @@ TG: https://t.me/tom_ww
   
   新增dkdua，代表UA，即User-Agent，有能力最好手动抓一下自己的UA，目前填空则采取生成随机UA的方式。
   
-  另：1.这个脚本目前只写了获取百分之四十的金币，后续的会抓紧继续写出来。
-     2.有其它毛也可以喊我写。
+  另：1.有其它毛可以喊我写。
+      2.脚本内置邀请，介意勿跑，谢谢。
  */
 
 
